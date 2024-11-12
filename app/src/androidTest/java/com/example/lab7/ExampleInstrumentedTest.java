@@ -19,7 +19,7 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void testNameTooLongShowsMessage() {
-        Espresso.onView(withId(R.id.name)).perform(typeText("this_is_a_long_name"));
+        Espresso.onView(withId(R.id.first_name)).perform(typeText("this_is_a_long_name"));
         Espresso.onView(withId(R.id.submit_button)).perform(click());
         // Check that the TextView with "Length is too long" is displayed
         Espresso.onView(withId(R.id.message_text_view))
@@ -28,7 +28,7 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void testNameAcceptedShowsMessage() {
-        Espresso.onView(withId(R.id.name)).perform(typeText("marc"));
+        Espresso.onView(withId(R.id.first_name)).perform(typeText("marc"));
         Espresso.onView(withId(R.id.submit_button)).perform(click());
         // Check that the TextView with "Accepted" is displayed
         Espresso.onView(withId(R.id.message_text_view))
